@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+background-color: white;
+}
+.header{
+    display:flex;
+    padding: 20px;
+    color: white;
+    background-color:rgb(36, 75, 66) ;
+    align-items: center;
+    justify-content: space-around;
+}
+.title{
+    display:flex;
+    gap:80px;
+    align-items: center;
+}
+.name{
+    font-size: 30px;
+}
+ul {
+    display:flex;
+    gap:4rem;
+}
+li{
+   
+   list-style:none ;
+   font-size: 20px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.searchh{
+    padding: 10px;
+    width:250px;
+    outline:none;
+    font-size: 16px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.searc{
+    display:flex;
+    gap:12px;
+    align-items: center;
+}
+.searchh::placeholder{
+    color: black;
+    font-size: 16px;
+}
+.love{
+    font-size: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.cartt{
+    position: relative;
+    font-size: 30px;
+    cursor: pointer;
+}
+.likes,
+.cart-L{
+    position: absolute;
+    top:-3px;
+    font-size: 20px;
+    color: red;
+    z-index: 1px;
+    right:-1px;
+}
+.lovey{
+    color:black;
+    font-size:40px;
+}
+/* second */
+.second-row{
+    margin-top: 7rem;
+    display:flex;
+    gap:7rem;
+    justify-content: center;
+    align-items: center;
+}
+.hot{
+    font-size: 16px;
+}
+.fashion{
+    margin-top: 20px;
+    font-size: 50px;
+}
+.tren{
+    font-size: 70px;
+    color: rgb(36, 75, 66);
+}
+.btn{
+    padding:13px;
+    color: white;
+    width:150px;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 16px;
+    background-color:rgb(36, 75, 66) ;
+}
+.imgy{
+    width:120%;
+}
+.count{
+    color:white;
+}
+.buttons{
+    margin-top: 20px;
+    display:flex;
+    align-items: center;
+    gap:10px;
+}
+.shop-cart{
+    background-color: rgb(36, 75, 66);
+    /* display:none; */
+    padding: 10px;
+    width:400px;
+    position: fixed;
+    position: absolute;
+    top: 0px;
+   border-bottom-left-radius: 10px;
+    right: 0px;
+}
+.card2{
+    /* width:130px; */
+    padding:10px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap:40px;
+}
+.namey1{
+    color:white;
+    margin-bottom: 10px;
+    font-size:14px;
+}
+/* third */
+.card-1{
+    border: 3px solid rgb(173, 170, 170);
+    padding: 7px;
+   border-radius: 10px;
+}
+.card{
+    margin-top: 100px;
+    gap:30px;
+    margin-bottom: 70px;
+   display: grid;
+   justify-content: center;
+   grid-template-columns: repeat(6,250px);
+}
+.btn-up,
+.btn-up1{
+    /* position: absolute; */
+    margin-bottom:-12px;
+    z-index: 1px;
+}
+.amount1,
+.amount2{
+    color:rgb(40, 127, 105) ;
+}
+.namey{
+    margin-top: 8px;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.cate1{
+    width:100px;
+    border-radius: 10px;
+}
+.cate{
+    width:230px;
+    border-radius: 10px;
+}
+.catee{
+    position: relative;
+   
+    text-align: center;
+}
+.total{
+    margin-top: 30px;
+    font-size: 27px;
+    text-align: center;
+    background-color: white;
+}
+
+/* fourth */
+.fourth{
+    padding-top: 70px;
+    background-color:rgb(36, 75, 66) ;
+    color:rgb(209, 205, 205);
+    display:flex;
+    align-items: center;
+    padding-bottom: 30px;
+    justify-content: space-around;
+}
+/* footer */
+.marv{
+    font-size:40px;
+    margin-bottom: 20px;
+}
+.add{
+    font-size:23px;
+}
+.info{
+    font-size:23px;
+    padding:10px;
+}
+.love{
+    
+}
+
+
+
+
+/* mobile */
+@media screen and (width: 480px){
+    .header{
+        color: white;
+        background-color: rgb(36, 75, 66);
+    }
+    .searc{
+        gap:6px;
+    }
+    .shhop{
+        font-size:30px;
+    }
+    .name{
+        font-size:20px;
+    }
+    ul{
+        display:none;
+    }
+    .searchh{
+        padding: 5px;
+        border: none;
+        width:150px;
+    }
+    .second-row{
+        display: grid;
+        text-align: center;
+    }
+    .imgy{
+        width:80%;
+    }
+    .fashion{
+        font-size: 30px;
+    }
+    .tren{
+        font-size: 40px;
+    }
+    .card-1{
+        width:120px;
+    }
+    .card{
+       display: grid;
+       justify-content: center;
+       grid-template-columns: repeat(3,100px);
+    }
+    .cate{
+        width:100px;
+    }
+    .name-cate{
+        font-size: 16px;
+    }
+    .namey{
+        font-size: 10px;
+    }
+    .amount1{
+        font-size: 12px;
+    }
+    .marv{
+        font-size: 26px;
+        /* margin-left: 50px; */
+    }
+    .payment{
+        width:120px;
+    }
+    .adress{
+        display:none;
+    }
+    .fourth{
+        gap:70px;
+    }
+    .middle-man{
+        margin-left: 20px;
+    }
+    .info{
+        font-size: 19px;
+    }
+}
