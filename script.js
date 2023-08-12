@@ -52,7 +52,7 @@ let generateItems = () =>{
             <div class="amount">
                 <h3>$ ${price}</h3>
                 <div class="buttons">
-                    <button onclick="increase(${id})">+</button>
+                    <button onclick="increase(${id})" class="increase">+</button>
                     <h6 id=${id}>${search.item=== undefined ? 0 : search.item}</h6>
                     <button  onclick="decrease(${id})" class="decrease">-</button>
                 </div>
@@ -63,19 +63,20 @@ let generateItems = () =>{
 
 }
 generateItems()
+
 // ${search.item=== undefined ? 0 : search.item}
 
+
  let increase =(id)=>{
-         let pickItem = id;
+        let pickItem = id;
         let search= Basket.find((z)=>z.id === pickItem.id)
-         if(search === undefined){
+     if(search === undefined){
         Basket.push({
         id:pickItem.id,
         item:1
       })
      }else search.item += 1;
-  
-
+        
         update(pickItem.id)
         localStorage.setItem('DATA',JSON.stringify(Basket))
 }
