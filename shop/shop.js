@@ -4,7 +4,7 @@ let ShopNow=[
         name:'Trouser',
         price: 235.53,
         desc:"Colorful Pattern Shirts",
-        image:'img/product-1-1.jpg',
+        image:'shop/img/product-1-1.jpg',
        
         
     },
@@ -13,7 +13,7 @@ let ShopNow=[
         name:'wrist watch',
         price: 145,
         desc:"lorem is good sheat wear",
-        image:'img/product-1-2.jpg',
+        image:'shop/img/product-1-2.jpg',
        
         
     },
@@ -22,7 +22,7 @@ let ShopNow=[
         name:'Lady wear',
         price: 300,
         desc:"lorem is good sheat wear",
-        image:'img/product-10-1.jpg',
+        image:'shop/img/product-10-1.jpg',
        
         
     },
@@ -31,14 +31,14 @@ let ShopNow=[
         name:' Tee shirt',
         price: 245,
         desc:"lorem is good sheat wear",
-        image:"img/product-10-2.jpg",    
+        image:"shop/img/product-10-2.jpg",    
     },
     {
         id:4,
         name:'shirt',
         price: 95,
         desc:"lorem is good sheat wear",
-        image:'img/product-11-1.jpg',
+        image:'shop/img/product-11-1.jpg',
        
         
     },
@@ -47,7 +47,7 @@ let ShopNow=[
         name:'smart shirt',
         price: 145,
         desc:"lorem is good sheat wear",
-        image:'img/product-11-2.jpg',
+        image:'shop/img/product-11-2.jpg',
        
         
     },
@@ -56,7 +56,7 @@ let ShopNow=[
         name:'Lady wear',
         price: 300,
         desc:"lorem is good sheat wear",
-        image:'img/product-12-2.jpg',
+        image:'shop/img/product-12-2.jpg',
        
         
     },
@@ -65,14 +65,14 @@ let ShopNow=[
         name:' Tee shirt',
         price: 245,
         desc:"lorem is good sheat wear",
-        image:"img/product-13-1.jpg",    
+        image:"shop/img/product-13-1.jpg",    
     },
     {
         id:8,
         name:'shirt',
         price: 95,
         desc:"lorem is good sheat wear",
-        image:'img/product-13-2.jpg',
+        image:'shop/img/product-13-2.jpg',
        
         
     },
@@ -81,7 +81,7 @@ let ShopNow=[
         name:'smart shirt',
         price: 145,
         desc:"lorem is good sheat wear",
-        image:'img/showcase-img-1.jpg',
+        image:'shop/img/showcase-img-1.jpg',
        
         
     },
@@ -90,7 +90,7 @@ let ShopNow=[
         name:'Crocs queen',
         price: 100,
         desc:"lorem is good sheat wear",
-        image:'img/showcase-img-3.jpg',
+        image:'shop/img/showcase-img-3.jpg',
        
         
     },
@@ -99,14 +99,14 @@ let ShopNow=[
         name:' Wrist Watch',
         price: 445,
         desc:"lorem is good sheat wear",
-        image:"img/showcase-img-5.jpg",    
+        image:"shop/img/showcase-img-5.jpg",    
     },
     {
         id:12,
         name:'Crocs',
         price: 95,
         desc:"lorem is good sheat wear",
-        image:'img/showcase-img-8.jpg',
+        image:'shop/img/showcase-img-8.jpg',
        
         
     },
@@ -115,7 +115,7 @@ let ShopNow=[
         name:'smart shirt',
         price: 145,
         desc:"lorem is good sheat wear",
-        image:'img/showcase-img-9.jpg',
+        image:'shop/img/showcase-img-9.jpg',
        
         
     },
@@ -124,7 +124,7 @@ let ShopNow=[
         name:'crocs beauty',
         price: 300,
         desc:"lorem is good sheat wear",
-        image:'img/showcase-img-6.jpg',
+        image:'shop/img/showcase-img-6.jpg',
        
         
     },
@@ -133,7 +133,7 @@ let ShopNow=[
         name:' Tee shirt',
         price: 245,
         desc:"lorem is good sheat wear",
-        image:"img/product-7-2.jpg",    
+        image:"shop/img/product-7-2.jpg",    
     },
 ]
 
@@ -257,6 +257,11 @@ let shoppingCart=() =>{
     })
 }
 shoppingCart()
+
+
+
+
+
 
 
 // let increase =(id)=>{
