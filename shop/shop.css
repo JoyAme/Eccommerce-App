@@ -105,7 +105,7 @@ a{
     background-color:rgb(36, 75, 66) ;
 }
 .imgy{
-    width:120%;
+    width:50rem;
 }
 .count{
     color:white;
@@ -257,24 +257,25 @@ a{
         text-align: center;
     }
     .imgy{
-        width:80%;
+        width:25rem;
     }
     .fashion{
-        font-size: 30px;
+        font-size: 20px;
     }
     .tren{
-        font-size: 40px;
+        font-size: 25px;
     }
     .card-1{
-        width:120px;
+        width:8rem;
     }
     .card{
        display: grid;
        justify-content: center;
-       grid-template-columns: repeat(3,100px);
+       grid-template-columns: repeat(3,120px);
     }
     .cate{
-        width:100px;
+        width:7rem;
+        text-align: center;
     }
     .name-cate{
         font-size: 16px;
