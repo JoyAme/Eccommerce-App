@@ -257,7 +257,7 @@ a{
         text-align: center;
     }
     .imgy{
-        width:25rem;
+        width:20rem;
     }
     .fashion{
         font-size: 20px;
@@ -266,15 +266,15 @@ a{
         font-size: 25px;
     }
     .card-1{
-        width:8rem;
+        width:5rem;
     }
     .card{
        display: grid;
-       justify-content: center;
-       grid-template-columns: repeat(3,120px);
+       
+       grid-template-columns: repeat(4,60px);
     }
     .cate{
-        width:7rem;
+        width:4rem;
         text-align: center;
     }
     .name-cate{

@@ -144,6 +144,8 @@ let goods= document.querySelector('.card')
 let cart= document.querySelector('.class')
 const card= document.querySelector('.shop-cart')
 const cartEl= document.querySelector('.cart-L')
+let Add=document.querySelector('.Add')
+let count=document.querySelector('.count')
 
 
 
@@ -199,8 +201,10 @@ let addToCart= (id) => {
 
 function upDate(){
     shoppingCart()
-    // cartCount()
+   
 }
+
+
 
 // function CountItem (action,id){
 //     ShopNow.map((item)=> {
@@ -243,7 +247,7 @@ let shoppingCart=() =>{
                 <h3 class="amount2">$${item.price}</h3>
             </div>
             <div class="buttons">
-                <button onclick="increase()">+</button>
+                <button class="Add" onclick="increase()">+</button>
                 <h6 class="count">${item.Items}</h6>
                 <button class="decrease" onclick="decrease()">-</button>
             </div>
@@ -258,7 +262,21 @@ let shoppingCart=() =>{
 }
 shoppingCart()
 
-
+let increase=(id)=>{
+    let searchIt= Basket.find((item)=> item.id === id)
+    
+        if(searchIt === id){
+            Basket.push({
+            
+            items:1
+          })
+         }else searchIt.items += 1;
+        //  count.innerHTML=searchIt.items
+        
+  
+   console.log(searchIt)
+}
+increase()
 
 
 
