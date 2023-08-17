@@ -265,21 +265,21 @@ let shoppingCart=() =>{
 }
 shoppingCart()
 
-let increase=(id)=>{
-    let searchIt= Basket.find((item)=> item.id === id)
+// let increase=(id)=>{
+//     let searchIt= Basket.find((item)=> item.id === id)
     
-        if(searchIt === id){
-            Basket.push({
+//         if(searchIt === id){
+//             Basket.push({
             
-            items:1
-          })
-         }else searchIt.items += 1;
-        //  count.innerHTML=searchIt.items
+//             items:1
+//           })
+//          }else searchIt.items += 1;
+        
         
   
-   console.log(searchIt)
-}
-increase()
+//    console.log(searchIt)
+// }
+// increase()
 
 
 
