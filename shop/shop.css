@@ -102,10 +102,11 @@ a{
     cursor: pointer;
     margin-top: 30px;
     font-size: 16px;
+   
     background-color:rgb(36, 75, 66) ;
 }
 .imgy{
-    width:1000px;
+    width:px;
 }
 .count{
     color:white;
@@ -124,6 +125,7 @@ a{
     position: fixed;
     position: absolute;
     top: 40px;
+    display: none;
    border-bottom-left-radius: 10px;
     right: 0px;
 }
@@ -260,11 +262,22 @@ a{
     .imgy{
         width:80%;
     }
-    .fashion{
+    #class{
+        font-size: 20px;
+      
+    }
+    .hot{
         font-size: 20px;
     }
+    .btn{
+        font-size: 21px;
+        width:13rem;
+    }
+    .fashion{
+        font-size: 40px;
+    }
     .tren{
-        font-size: 25px;
+        font-size: 30px;
     }
     .card-1{
         width:6rem;
@@ -278,10 +291,10 @@ a{
         text-align: center;
     }
     .name-cate{
-        font-size: 16px;
+        font-size: 12px;
     }
     .namey{
-        font-size: 10px;
+        font-size: 8px;
     }
     .amount1{
         font-size: 12px;
@@ -305,11 +318,9 @@ a{
     .info{
         font-size: 19px;
     }
-    .second-row{
+    /* .second-row{
         display: block;
         text-align: center;
-    }
-    .imgy{
-        width:70%;
-    }
+    } */
+   
 }
