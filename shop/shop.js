@@ -149,7 +149,7 @@ let count=document.querySelector('.count')
 
 
 
-let generateItems = () =>{
+let generateItems = (id) =>{
     ShopNow.forEach((shop)=>{
          goods.innerHTML+= ` 
         <div class='card-1' >
@@ -164,6 +164,9 @@ let generateItems = () =>{
             <h3 class="amount1">$${shop.price}</h3>
             <i class="fa fa-cart-plus class" id="class" "  onclick="addToCart(${shop.id})"aria-hidden="true"></i>
         </div> 
+   
+
+
         </div>`; 
     })
 

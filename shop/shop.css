@@ -153,7 +153,7 @@ a{
     margin-bottom: 70px;
    display: grid;
    justify-content: center;
-   grid-template-columns: repeat(6,250px);
+   grid-template-columns: repeat(6,200px);
 }
 .btn-up,
 .btn-up1{
@@ -271,7 +271,7 @@ a{
     }
     .card{
        display: grid;
-       grid-template-columns: repeat(3,100px);
+       grid-template-columns: repeat(3,80px);
     }
     .cate{
         width:5rem;
