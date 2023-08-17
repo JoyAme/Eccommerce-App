@@ -105,7 +105,7 @@ a{
     background-color:rgb(36, 75, 66) ;
 }
 .imgy{
-    width:50rem;
+    width:1000px;
 }
 .count{
     color:white;
@@ -287,7 +287,7 @@ a{
     }
     .marv{
         font-size: 26px;
-        /* margin-left: 50px; */
+       
     }
     .payment{
         width:120px;
@@ -303,5 +303,12 @@ a{
     }
     .info{
         font-size: 19px;
+    }
+    .second-row{
+        display: block;
+        text-align: center;
+    }
+    .imgy{
+        width:70%;
     }
 }
