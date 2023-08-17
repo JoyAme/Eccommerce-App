@@ -144,6 +144,7 @@ a{
 .card-1{
     border: 3px solid rgb(173, 170, 170);
     padding: 7px;
+    width:12rem;
    border-radius: 10px;
 }
 .card{
@@ -185,7 +186,7 @@ a{
     border-radius: 10px;
 }
 .cate{
-    width:230px;
+    width:10rem;
     border-radius: 10px;
 }
 .catee{
@@ -266,14 +267,14 @@ a{
         font-size: 25px;
     }
     .card-1{
-        width:120px;
+        width:6rem;
     }
     .card{
        display: grid;
-       grid-template-columns: repeat(3,120px);
+       grid-template-columns: repeat(3,100px);
     }
     .cate{
-        width:100px;
+        width:5rem;
         text-align: center;
     }
     .name-cate{
