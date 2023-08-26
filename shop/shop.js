@@ -1,8 +1,10 @@
 let ShopNow=[
     {
         id:0,
+        New:"New",
+        instock:5,
         name:'Trouser',
-        price: 235.53,
+        price: 235,
         desc:"Colorful Pattern Shirts",
         image:'shop/img/product-1-1.jpg',
        
@@ -10,6 +12,8 @@ let ShopNow=[
     },
     {
         id:1,
+        New:"recent",
+        instock:5,
         name:'wrist watch',
         price: 145,
         desc:"lorem is good sheat wear",
@@ -19,6 +23,8 @@ let ShopNow=[
     },
     {
         id:2,
+        New:"New",
+        instock:5,
         name:'Lady wear',
         price: 300,
         desc:"lorem is good sheat wear",
@@ -28,6 +34,8 @@ let ShopNow=[
     },
     {
         id:3,
+        New:"recent",
+        instock:12,
         name:' Tee shirt',
         price: 245,
         desc:"lorem is good sheat wear",
@@ -35,15 +43,19 @@ let ShopNow=[
     },
     {
         id:4,
+        New:"New",
+        instock:5,
         name:'shirt',
         price: 95,
-        desc:"lorem is good sheat wear",
+        desc:"color shirt Tee",
         image:'shop/img/product-11-1.jpg',
        
         
     },
     {
         id:5,
+        New:"Luxury",
+        instock:19,
         name:'smart shirt',
         price: 145,
         desc:"lorem is good sheat wear",
@@ -53,6 +65,8 @@ let ShopNow=[
     },
     {
         id:6,
+        New:"recent",
+        instock:8,
         name:'Lady wear',
         price: 300,
         desc:"lorem is good sheat wear",
@@ -62,6 +76,8 @@ let ShopNow=[
     },
     {
         id:7,
+        New:"recent",
+        instock:5,
         name:' Tee shirt',
         price: 245,
         desc:"lorem is good sheat wear",
@@ -69,6 +85,8 @@ let ShopNow=[
     },
     {
         id:8,
+        New:"New",
+        instock:20,
         name:'shirt',
         price: 95,
         desc:"lorem is good sheat wear",
@@ -78,6 +96,8 @@ let ShopNow=[
     },
     {
         id:9,
+        New:"luxury",
+        instock:26,
         name:'smart shirt',
         price: 145,
         desc:"lorem is good sheat wear",
@@ -87,6 +107,8 @@ let ShopNow=[
     },
     {
         id:10,
+        New:"fashion",
+        instock:27,
         name:'Crocs queen',
         price: 100,
         desc:"lorem is good sheat wear",
@@ -96,6 +118,8 @@ let ShopNow=[
     },
     {
         id:11,
+        New:"luxury",
+        instock:5,
         name:' Wrist Watch',
         price: 445,
         desc:"lorem is good sheat wear",
@@ -103,6 +127,8 @@ let ShopNow=[
     },
     {
         id:12,
+        New:"fashion",
+        instock:5,
         name:'Crocs',
         price: 95,
         desc:"lorem is good sheat wear",
@@ -112,6 +138,8 @@ let ShopNow=[
     },
     {
         id:13,
+        New:"recent",
+        instock:15,
         name:'smart shirt',
         price: 145,
         desc:"lorem is good sheat wear",
@@ -121,6 +149,8 @@ let ShopNow=[
     },
     {
         id:14,
+        New:"New",
+        instock:5,
         name:'crocs beauty',
         price: 300,
         desc:"lorem is good sheat wear",
@@ -130,6 +160,8 @@ let ShopNow=[
     },
     {
         id:15,
+        New:"recent",
+        instock:15,
         name:' Tee shirt',
         price: 245,
         desc:"lorem is good sheat wear",
@@ -142,53 +174,61 @@ let ShopNow=[
 
 let goods= document.querySelector('.card')
 let cart= document.querySelector('.class')
-const card= document.querySelector('.shop-cart')
+const card= document.querySelector('.carrd')
 const cartEl= document.querySelector('.cart-L')
 let Add=document.querySelector('.Add')
 let count=document.querySelector('.count')
-
+let Total=document.querySelector('.Total')
 
 
 let generateItems = (id) =>{
     ShopNow.forEach((shop)=>{
+       
          goods.innerHTML+= ` 
         <div class='card-1' >
-        <h4 class="btn-up">New</h4>
+        <h4 class="btn-up">${shop.New}</h4>
         <div class='catee'>
         <img src="${shop.image}" alt="cate" class="cate"/>
         </div>
         <h3 class="name-cate">${shop.name}</h3>
-        <h2 class="namey">${shop.desc}</h2>
+        
         <span class="yellow"></span>
         <div class="amount">
             <h3 class="amount1">$${shop.price}</h3>
-            <i class="fa fa-cart-plus class" id="class" "  onclick="addToCart(${shop.id})"aria-hidden="true"></i>
+            <i class="fa fa-cart-plus class" id="class"   onclick="addToCart(${shop.id})"aria-hidden="true"></i>
         </div> 
-   
-
 
         </div>`; 
+        
+        if(shop.New === 'New' ){
+            document.querySelector('.btn-up').style.backgroundColor= "green";
+        }else if(shop.New === "recent")
+        {
+            document.querySelector('.btn-up').style.backgroundColor="red"
+        }
+       
     })
-
+    
 }
 generateItems()
 
+function upDate(){
+    shoppingCart()
+    subTotal()
+    localStorage.setItem('CART',JSON.stringify(Basket))
+   
+ }
 
 
 
-//     let update =(id)=>{
-//         let search= Basket.find((x) => x.id === id)
-//         console.log(search.item)
-//         document.getElementById('.cart-L').innerHTML=search.item
-        
-//     }
 
+let Basket= JSON.parse(localStorage.getItem("CART"))|| [];
 
-let Basket=[]
 
 let addToCart= (id) => {  
+
     if(Basket.some((items)=> items.id === id)){
-        alert('ALREADY IN BASKET')
+        increase("plus", id)
     }else{
         let get= ShopNow.find((shop)=> shop.id === id);
         Basket.push({
@@ -202,120 +242,93 @@ let addToCart= (id) => {
 }
 
 
-function upDate(){
-    shoppingCart()
-   
-}
-
-
-
-// function CountItem (action,id){
-//     ShopNow.map((item)=> {
-//         if(action === "increase"){
-//             item.Items++
-//         }else(action === "decrease")
-//         {
-//             item.Items--
-//         }
-    
-//     })
-    
-// }
-
-
-
-// let cartCount=(id)=>{
-//     cartEl.innerHTML="";
-//     let get= ShopNow.find((shopy)=> shopy.id === id);
-//         Basket.push(get);
-//       console.log(Basket)
-   
-// }
-
 
 let shoppingCart=() =>{
     card.innerHTML=""
     Basket.forEach((item)=>{
         card.innerHTML += ` 
         <div>
-        <div class="card2">
-            <div>
-            
+        <div class="card2" >
+            <div class="images" onclick="removeItem(${item.id})">
             <img src="${item.image}" alt="${item.name}"class="cate1"/>
             </div>
+
             <div>
-           
             <h2 class="namey1">${item.desc}</h2>
             <div class="amount">
                 <h3 class="amount2">$${item.price}</h3>
             </div>
             <div class="buttons">
-                <button class="Add" onclick="increase()">+</button>
+                <button class="btnn plus" onclick="increase('plus',${item.id})">+</button>
                 <h6 class="count">${item.Items}</h6>
-                <button class="decrease" onclick="decrease()">-</button>
+                <button class="btnn minus" onclick="increase('minus',${item.id})">-</button>
             </div>
             
-        </div>
+        </div>  
+       </div>
                 
-                </div>
                 
-                <h1 class="total">Total : 200000</h1>
         ` 
     })
+   
 }
-shoppingCart()
-
-// let increase=(id)=>{
-//     let searchIt= Basket.find((item)=> item.id === id)
-    
-//         if(searchIt === id){
-//             Basket.push({
-            
-//             items:1
-//           })
-//          }else searchIt.items += 1;
-        
-        
-  
-//    console.log(searchIt)
-// }
-// increase()
 
 
-
-
-
-// let increase =(id)=>{
-//     console.log('done')
-//     Basket.find((tems)=>{
-      
-// }
-// increase()
-
-    //   let addToCart= function(){
-    //      console.log('clciked')
-    //      return  card.innerHTML=` 
-    //      <div class="card2">
-    //          <div>
-    //          <h4 id='' class="btn-up1">New</h4>
-    //          <img src="img/category-7.jpg" alt="cate" class="cate1"/>
-    //          </div>
-    //          <div>
-            
-    //          <h2 class="namey1">Colorful Pattern Shirts</h2>
-    //          <span class="yellow"></span>
-    //          <div class="amount">
-    //              <h3 class="amount2">$234.85</h3>
-    //          </div>
-    //          <div class="buttons">
-    //              <button >+</button>
-    //              <h6 class="count">0</h6>
-    //              <button class="decrease">-</button>
-    //          </div>
-    //              </div>
  
-    //      ` 
-    //   }
+function increase(action,id){
+    Basket = Basket.map((item)=>{
+
+    let Goods=item.Items
+       
+        if(item.id === id){
+            if(action === "plus" && Goods < item.instock){
+               Goods++;
+               
+            }else if(action == "minus" && Goods > 1)
+            {
+
+             Goods--;
+            
+            }
+        }
+        return{
+            ...item,
+            Items:Goods,    
+        }
+
+
+   });
+   upDate();
+   console.log(Basket)
+}
+        
+    
+// SUBTOTAL OF ORDER
+function subTotal(){
+    let totalItem=0,
+    TotalCartItem=0
+
+  Basket.forEach((item) => {
+       totalItem+= item.price * item.Items
+       TotalCartItem+=item.Items
+    })
+
+
+      Total.innerHTML=`<h4>SUBTOTAL: (${TotalCartItem}) :  $${totalItem}</h4>`
+ }
+
+  function removeItem(id){
+    Basket=Basket.filter((item)=>item.id !==id)
+    upDate()
+  }
+
+
+
+
+
+
+
+
 
       
      

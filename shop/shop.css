@@ -10,6 +10,11 @@ background-color: white;
     display:flex;
     padding: 20px;
     color: white;
+    position: fixed;
+    right:0;
+    z-index: 1;
+    left: 0;
+    top: 0;
     background-color:rgb(36, 75, 66) ;
     align-items: center;
     justify-content: space-around;
@@ -48,6 +53,11 @@ a{
     display:flex;
     gap:12px;
     align-items: center;
+}
+.Total{
+    text-align: center;
+    background-color: white;
+    color: rgb(36, 75, 66);
 }
 .searchh::placeholder{
     color: black;
@@ -120,34 +130,42 @@ a{
 .shop-cart{
     background-color: rgb(36, 75, 66);
     /* display:none; */
+    z-index: 1;
+    
     padding: 10px;
-    width:400px;
-    position: fixed;
+    width:500px;
     position: absolute;
-    top: 80px;
-    display: block;
+    /* position: fixed; */
+    top: 0px;
+    /* display: block; */
    border-bottom-left-radius: 10px;
     right: 0px;
 }
 .card2{
     /* width:130px; */
-  
+    
     padding:10px;
     display: flex;
     align-items:center;
-    justify-content: center;
+    justify-content: space-around;
     gap:40px;
+}
+.namey{
+
 }
 .namey1{
     color:white;
     margin-bottom: 10px;
     font-size:14px;
+  
 }
 /* third */
 .card-1{
     border: 3px solid rgb(173, 170, 170);
     padding: 7px;
     width:12rem;
+    
+    position: relative;
    border-radius: 10px;
 }
 .card{
@@ -158,17 +176,25 @@ a{
    justify-content: center;
    grid-template-columns: repeat(6,200px);
 }
-.btn-up,
-.btn-up1{
+.btn-up{
     /* position: absolute; */
-    margin-bottom:-12px;
-    z-index: 1px;
+    background-color: orange;
+    width:35%;
+    padding: 4px;
+    text-align: center;
+    border-radius: 17px;
+    margin-bottom: 12px;
+}
+.btn-up1{
+    position: absolute;
+    /* margin-bottom:-12px; */
+    /* z-index: 1px; */
 }
 .amount{
     display:flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px;
+    padding-top: 4px;
 }
 #class{
     font-size: 30px;
@@ -182,6 +208,11 @@ a{
 .namey{
     margin-top: 8px;
     font-size: 16px;
+    color: white;
+    padding: 3px;
+    width:100%;
+    /* text-align: center; */
+    background-color: rgb(36, 75, 66);
     margin-bottom: 8px;
 }
 .cate1{
@@ -208,7 +239,7 @@ a{
 .fourth{
     padding-top: 70px;
     background-color:rgb(36, 75, 66) ;
-    color:rgb(209, 205, 205);
+    color:white;
     display:flex;
     align-items: center;
     padding-bottom: 30px;
@@ -220,11 +251,11 @@ a{
     margin-bottom: 20px;
 }
 .add{
-    font-size:23px;
+    font-size:18px;
 }
 .info{
-    font-size:23px;
-    padding:10px;
+    font-size:18px;
+    padding:7px;
 }
 .love{
     
@@ -242,8 +273,14 @@ a{
     .searc{
         gap:6px;
     }
+    .shop-cart{
+        width:310px;
+    }
     .shhop{
         font-size:30px;
+    }
+    .amount1{
+        font-size: 12px;
     }
     .name{
         font-size:20px;
@@ -273,6 +310,11 @@ a{
     .btn{
         font-size: 21px;
         width:13rem;
+    }
+    .btn-up{
+       font-size: 8px;
+       width: 45%;
+       padding: 5px;
     }
     .fashion{
         font-size: 40px;
