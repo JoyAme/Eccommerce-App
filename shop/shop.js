@@ -179,6 +179,20 @@ const cartEl= document.querySelector('.cart-L')
 let Add=document.querySelector('.Add')
 let count=document.querySelector('.count')
 let Total=document.querySelector('.Total')
+const form=document.querySelector('.form')
+const search=document.querySelector('.searchh')
+
+form.addEventListener('submit',(e)=>{
+   e.preventDefault()
+   ShopNow.map((item,id)=>item.New)
+   let find=search.value
+    if(id === find){
+       if(item === item.New){
+        generateItems()
+       }
+    }
+        console.log('enter')
+})
 
 
 let generateItems = (id) =>{
@@ -211,6 +225,8 @@ let generateItems = (id) =>{
     
 }
 generateItems()
+
+
 
 function upDate(){
     shoppingCart()
